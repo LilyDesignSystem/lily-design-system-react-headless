@@ -1,8 +1,8 @@
-// KanbanTableTD component
+// DataTableTD component
 //
-// A column header cell within a KanbanTable, rendered as a <th> element.
-// Used inside a <KanbanTableRow> within <KanbanTableHead> to label each
-// workflow stage column.
+// A column header cell within a DataTable, rendered as a <th> element.
+// Used inside a <DataTableRow> within <DataTableHead> to label the columns
+// of the data table.
 //
 // Props:
 //   className — string, optional. CSS class name.
@@ -14,14 +14,14 @@
 //
 // Claude rules:
 //   - Headless: no CSS, no styles — consumer provides all styling
-//   - Must be used inside a <tr> within a KanbanTable
+//   - Must be used inside a <tr> within a DataTable
 //
 // References:
 //   - HTML th element: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/th
 
 import React from "react";
 
-export interface KanbanTableTDProps {
+export interface DataTableTDProps {
     className?: string;
     /** Number of columns this header cell spans. */
     colSpan?: number;
@@ -34,17 +34,17 @@ export interface KanbanTableTDProps {
     [key: string]: unknown;
 }
 
-export default function KanbanTableTD({
+export default function DataTableTD({
     className = "",
     colSpan,
     rowSpan,
     scope = "col",
     children,
     ...restProps
-}: KanbanTableTDProps) {
+}: DataTableTDProps) {
     return (
         <th
-        className={`kanban-table-col ${className}`}
+        className={`data-table-th ${className}`}
         scope={scope}
         colSpan={colSpan || undefined}
         rowSpan={rowSpan || undefined}

@@ -5,7 +5,7 @@ export interface BackToTopProps {
   [key: string]: unknown;
 }
 
-export default function BackToTop({
+export default function GoToTop({
   className = "",
   label = undefined,
   children,
@@ -13,7 +13,7 @@ export default function BackToTop({
 }: BackToTopProps) {
   return (
     <a
-      className={`back-to-top ${className}`}
+      className={`go-to-top ${className}`}
       aria-label={label}
       {...restProps}
     >

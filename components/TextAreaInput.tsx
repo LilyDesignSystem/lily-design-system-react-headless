@@ -1,9 +1,9 @@
-// Textarea component
+// TextAreaInput component
 //
 // A headless multi-line text input that wraps the native HTML <textarea>
 // element. Used for comments, messages, descriptions, feedback, code input,
 // and any scenario where users need to enter extended text content. Unlike
-// a single-line TextInput, Textarea provides a larger, scrollable text area
+// a single-line TextInput, TextAreaInput provides a larger, scrollable text area
 // that supports multiple lines.
 //
 // Props:
@@ -11,22 +11,22 @@
 //   label — string, required. Accessible name via aria-label.
 //   value — string, default "". Bindable text content; supports value + onChange.
 //   rows — number, default undefined. Number of visible text rows.
-//   required — boolean, default false. Whether the textarea is required.
-//   disabled — boolean, default false. Whether the textarea is disabled.
+//   required — boolean, default false. Whether the text-area-input is required.
+//   disabled — boolean, default false. Whether the text-area-input is disabled.
 //   ...restProps — additional HTML attributes spread onto the <textarea>.
 //
 // Syntax:
-//   <Textarea label="Comments" value={value} onChange={setValue} rows={5} />
+//   <TextAreaInput label="Comments" value={value} onChange={setValue} rows={5} />
 //
 // Examples:
 //
-//   <Textarea label="Description" value={description} onChange={setDescription} required />
+//   <TextAreaInput label="Description" value={description} onChange={setDescription} required />
 //
 //
-//   <Textarea label="Notes" value={value} onChange={setValue} disabled={isReadOnly} />
+//   <TextAreaInput label="Notes" value={value} onChange={setValue} disabled={isReadOnly} />
 //
 // Keyboard:
-//   - Tab: moves focus to and from the textarea (native behavior)
+//   - Tab: moves focus to and from the text-area-input (native behavior)
 //   - Enter: inserts a new line (does not submit forms)
 //   - All standard text editing keys function normally
 //
@@ -43,7 +43,7 @@
 //   - Consumer can wrap with their own visible <label> element
 //
 // References:
-//   - MDN textarea element: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea
+//   - MDN text-area-input element: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/text-area-input
 
 import React from "react";
 
@@ -64,7 +64,7 @@ export interface TextareaProps {
     [key: string]: unknown;
 }
 
-export default function Textarea({
+export default function TextAreaInput({
     className = "",
     label,
     value = "",
@@ -76,7 +76,7 @@ export default function Textarea({
 }: TextareaProps) {
     return (
         <textarea
-        className={`textarea ${className}`}
+        className={`text-area-input ${className}`}
         aria-label={label}
         value={value} onChange={(e) => onChange?.(e.target.value)}
         rows={rows}

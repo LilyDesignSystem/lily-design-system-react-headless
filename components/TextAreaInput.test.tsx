@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 
-import Subject from "./Textarea";
+import Subject from "./TextAreaInput";
 
-describe("Textarea", () => {
-    test("renders a textarea", () => {
+describe("TextAreaInput", () => {
+    test("renders a text-area-input", () => {
         render(<Subject label="Comments" />);
         expect(screen.getByRole("textbox")).toBeTruthy();
     });

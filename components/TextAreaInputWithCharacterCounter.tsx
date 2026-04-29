@@ -2,31 +2,31 @@
 //
 // A headless component that wraps a native <textarea> and a character counter
 // caption inside a <div>. The counter displays "[number] of [maximum] characters"
-// below the textarea and updates reactively as the user types.
+// below the text-area-input and updates reactively as the user types.
 //
 // Props:
 //   className — string, optional. CSS class name.
-//   label — string, required. Accessible name for the textarea via aria-label.
-//   value — string, default "". Current textarea value.
+//   label — string, required. Accessible name for the text-area-input via aria-label.
+//   value — string, default "". Current text-area-input value.
 //   maxLength — number, required. Maximum number of characters allowed.
 //   counterTemplate — string, default "{count} of {max} characters". Counter text template.
 //   rows — number, optional. Number of visible text rows.
-//   placeholder — string, optional. Placeholder text for the textarea.
+//   placeholder — string, optional. Placeholder text for the text-area-input.
 //   onChange — (value: string) => void, optional. Callback when value changes.
-//   required — boolean, default false. Whether the textarea is required.
-//   disabled — boolean, default false. Whether the textarea is disabled.
+//   required — boolean, default false. Whether the text-area-input is required.
+//   disabled — boolean, default false. Whether the text-area-input is disabled.
 //   ...restProps — additional HTML attributes spread onto the wrapper <div>.
 //
 // Syntax:
 //   <TextAreaInputWithCharacterCounter label="Feedback" maxLength={500} value={value} onChange={setValue} />
 //
 // Keyboard:
-//   - Tab: Focus the textarea (native browser behavior)
-//   - Standard textarea keyboard interactions
+//   - Tab: Focus the text-area-input (native browser behavior)
+//   - Standard text-area-input keyboard interactions
 //
 // Accessibility:
-//   - aria-label on the textarea provides accessible name
-//   - aria-describedby links textarea to the counter
+//   - aria-label on the text-area-input provides accessible name
+//   - aria-describedby links text-area-input to the counter
 //   - aria-live="polite" on counter announces updates to screen readers
 //
 // Internationalization:
@@ -35,18 +35,18 @@
 //
 // Claude rules:
 //   - Headless: no CSS, no styles — consumer provides all styling
-//   - restProps spread onto the wrapper <div>, not the textarea
+//   - restProps spread onto the wrapper <div>, not the text-area-input
 //
 // References:
-//   - MDN textarea: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea
+//   - MDN text-area-input: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/text-area-input
 
 import React, { useId } from "react";
 
 export interface TextAreaInputWithCharacterCounterProps {
     className?: string;
-    /** Accessible name for the textarea */
+    /** Accessible name for the text-area-input */
     label: string;
-    /** Current textarea value */
+    /** Current text-area-input value */
     value?: string;
     /** Maximum number of characters allowed */
     maxLength: number;
@@ -54,13 +54,13 @@ export interface TextAreaInputWithCharacterCounterProps {
     counterTemplate?: string;
     /** Number of visible text rows */
     rows?: number;
-    /** Placeholder text for the textarea */
+    /** Placeholder text for the text-area-input */
     placeholder?: string;
     /** Callback when value changes */
     onChange?: (value: string) => void;
-    /** Whether the textarea is required */
+    /** Whether the text-area-input is required */
     required?: boolean;
-    /** Whether the textarea is disabled */
+    /** Whether the text-area-input is disabled */
     disabled?: boolean;
     [key: string]: unknown;
 }

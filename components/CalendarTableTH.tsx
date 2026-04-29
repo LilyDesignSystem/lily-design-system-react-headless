@@ -59,7 +59,7 @@ export default function CalendarTableTD({
 }: CalendarTableTDProps) {
     return (
         <th
-        className={`calendar-table-col ${className}`}
+        className={`calendar-table-th ${className}`}
         scope={scope}
         colSpan={colSpan || undefined}
         rowSpan={rowSpan || undefined}
