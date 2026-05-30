@@ -1,12 +1,12 @@
 import { render } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 
-import Subject from "./Comment";
+import Subject from "./Answer";
 
-describe("Comment", () => {
-    test("renders a div element with class comment", () => {
+describe("Answer", () => {
+    test("renders a div element with class answer", () => {
         const { container } = render(<Subject>content</Subject>);
-        const root = container.querySelector(".comment");
+        const root = container.querySelector(".answer");
         expect(root).toBeTruthy();
         expect(root?.tagName).toBe("DIV");
     });
@@ -18,13 +18,13 @@ describe("Comment", () => {
 
     test("does not set aria-label when label is omitted", () => {
         const { container } = render(<Subject>content</Subject>);
-        const root = container.querySelector(".comment");
+        const root = container.querySelector(".answer");
         expect(root?.getAttribute("aria-label")).toBeNull();
     });
 
     test("applies aria-label when label prop is provided", () => {
         const { container } = render(<Subject label="Hello">content</Subject>);
-        const root = container.querySelector(".comment");
+        const root = container.querySelector(".answer");
         expect(root?.getAttribute("aria-label")).toBe("Hello");
     });
 

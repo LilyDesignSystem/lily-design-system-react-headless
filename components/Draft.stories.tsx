@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import QrCode from './QrCode';
+import Draft from './Draft';
 
 const meta = {
-  title: 'Headless/QrCode',
-  component: QrCode,
+  title: 'Headless/Draft',
+  component: Draft,
   tags: ['autodocs']
-} satisfies Meta<typeof QrCode>;
+} satisfies Meta<typeof Draft>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,6 +1,9 @@
-// Comment component
+// AddressographBox component
 //
-// A comment is anything that expresses an opinion, observation, explanation, etc.
+// A printed or rendered block of patient identification details, traditionally
+// applied to clinical paperwork by an addressograph-box machine. The component is
+// passive structural markup — the consumer supplies the identifier lines as
+// children (name, date of birth, NHS number, etc.).
 //
 // Props:
 //   className — string, optional. CSS class name.
@@ -16,7 +19,7 @@
 
 import React from "react";
 
-export interface CommentProps {
+export interface AddressographBoxProps {
     className?: string;
     /** Optional accessible label set on aria-label. */
     label?: string;
@@ -25,15 +28,15 @@ export interface CommentProps {
     [key: string]: unknown;
 }
 
-export default function Comment({
+export default function AddressographBox({
     className = "",
     label = undefined,
     children,
     ...restProps
-}: CommentProps) {
+}: AddressographBoxProps) {
     return (
         <div
-            className={`comment ${className}`}
+            className={`addressograph-box ${className}`}
             aria-label={label}
             {...restProps}
         >

@@ -1,6 +1,6 @@
-// Comment component
+// Question component
 //
-// A comment is anything that expresses an opinion, observation, explanation, etc.
+// A question is anything that asks for information, invites a response, tests knowledge, etc.
 //
 // Props:
 //   className — string, optional. CSS class name.
@@ -16,7 +16,7 @@
 
 import React from "react";
 
-export interface CommentProps {
+export interface QuestionProps {
     className?: string;
     /** Optional accessible label set on aria-label. */
     label?: string;
@@ -25,15 +25,15 @@ export interface CommentProps {
     [key: string]: unknown;
 }
 
-export default function Comment({
+export default function Question({
     className = "",
     label = undefined,
     children,
     ...restProps
-}: CommentProps) {
+}: QuestionProps) {
     return (
         <div
-            className={`comment ${className}`}
+            className={`question ${className}`}
             aria-label={label}
             {...restProps}
         >

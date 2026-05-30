@@ -1,4 +1,4 @@
-// QrCode component
+// QrCodeImage component
 //
 // A headless container for displaying a QR code (two-dimensional barcode) that
 // encodes data such as URLs, text, contact information, or other machine-readable
@@ -15,18 +15,18 @@
 //   ...restProps — additional HTML attributes spread onto the <div>.
 //
 // Syntax:
-//   <QrCode label="Scan to visit example.com">{qrSvg}</QrCode>
+//   <QrCodeImage label="Scan to visit example.com">{qrSvg}</QrCodeImage>
 //
 // Examples:
 //   
-//   <QrCode label="Scan to visit example.com">
+//   <QrCodeImage label="Scan to visit example.com">
 //     <svg></svg>
-//   </QrCode>
+//   </QrCodeImage>
 //
 //   
-//   <QrCode label="Scan to download the app">
+//   <QrCodeImage label="Scan to download the app">
 //     <canvas ref={qrCanvasRef}></canvas>
-//   </QrCode>
+//   </QrCodeImage>
 //
 // Keyboard:
 //   None — this is a passive display container with no interactive behavior.
@@ -50,20 +50,20 @@
 
 import React from "react";
 
-export interface QrCodeProps {
+export interface QrCodeImageProps {
     className?: string;
     [key: string]: unknown;
 }
 
-export default function QrCode({
+export default function QrCodeImage({
     className = "",
     label,
     children,
     ...restProps
-}: QrCodeProps) {
+}: QrCodeImageProps) {
     return (
         <div
-        className={`qr-code ${className}`}
+        className={`qr-code-image ${className}`}
         role="img"
         aria-label={label}
         {...restProps}

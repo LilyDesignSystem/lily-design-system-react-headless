@@ -1,4 +1,4 @@
-# QrCode
+# QrCodeImage
 
 A QR code component provides a headless container for displaying a two-dimensional barcode encoding data such as URLs, text, contact information, or other machine-readable content. Commonly used for sharing links, mobile payments, event check-ins, product information, and authentication workflows, the QR code provides a quick way to transfer information from a screen to a mobile device camera.
 
@@ -19,9 +19,9 @@ The component serves as a semantic container that consumers populate with their 
 ## Usage
 
 ```tsx
-<QrCode label="Scan to visit example.com">
+<QrCodeImage label="Scan to visit example.com">
   <svg>{/* QR code SVG paths */}</svg>
-</QrCode>
+</QrCodeImage>
 ```
 
 ## Keyboard Interactions

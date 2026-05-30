@@ -1,6 +1,6 @@
-// Comment component
+// Answer component
 //
-// A comment is anything that expresses an opinion, observation, explanation, etc.
+// An answer is anything that responds to a question, request, action, etc.
 //
 // Props:
 //   className — string, optional. CSS class name.
@@ -16,7 +16,7 @@
 
 import React from "react";
 
-export interface CommentProps {
+export interface AnswerProps {
     className?: string;
     /** Optional accessible label set on aria-label. */
     label?: string;
@@ -25,15 +25,15 @@ export interface CommentProps {
     [key: string]: unknown;
 }
 
-export default function Comment({
+export default function Answer({
     className = "",
     label = undefined,
     children,
     ...restProps
-}: CommentProps) {
+}: AnswerProps) {
     return (
         <div
-            className={`comment ${className}`}
+            className={`answer ${className}`}
             aria-label={label}
             {...restProps}
         >
