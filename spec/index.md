@@ -2,10 +2,10 @@
 
 Living specification for the React 19 headless implementation of the Lily
 Design System. Single source of truth for spec-driven development of this
-subproject. For project-wide rules, read the root [spec.md](../spec.md) first.
+subproject. For project-wide rules, read the root [spec/index.md](../../spec/index.md) first.
 
 This file adds React-specific detail and tracks the implementation status of
-the **492 canonical components** in this framework.
+the **490 canonical components** in this framework.
 
 ---
 
@@ -24,7 +24,7 @@ host (Next.js, Vite + React, Remix, Storybook, plain SPA).
 
 ### In scope
 
-- React 19 functional components for all 492 components from `components.tsv`.
+- React 19 functional components for all 490 components from `components.tsv`.
 - TypeScript interfaces for every component's props.
 - A vitest test file per component asserting ARIA, keyboard, and structural
   contract.
@@ -129,7 +129,7 @@ export default function {PascalCase}({
 ```
 
 HTML tag is the canonical tag from the root
-[`AGENTS/components.md`](../AGENTS/components.md) suffix-to-tag mapping.
+[`AGENTS/components.md`](../../AGENTS/components.md) suffix-to-tag mapping.
 
 ## 5. Testing
 
@@ -205,7 +205,7 @@ pnpm run storybook                   # run Storybook
 
 ### 8.1 Catalog parity
 
-- [ ] All 492 canonical components from [../components.tsv](../components.tsv)
+- [ ] All 490 canonical components from [../components.tsv](../../components.tsv)
       have a `{PascalCase}.tsx` + `.test.tsx` + `.stories.tsx` + `.md` set.
 - [x] Per-component docs live in the root `../components/{kebab-case}/`
       (shared canonical, not duplicated per subproject).
@@ -229,7 +229,7 @@ pnpm run storybook                   # run Storybook
 
 - [ ] No hardcoded user-facing strings.
 - [ ] Canonical text-prop names from the root
-      [AGENTS/internationalization.md](../AGENTS/internationalization.md).
+      [AGENTS/internationalization.md](../../AGENTS/internationalization.md).
 
 ### 8.5 Storybook
 
@@ -255,11 +255,11 @@ pnpm run storybook                   # run Storybook
 
 ### 9.2 Verified
 
-- [x] All 492 canonical components have `{PascalCase}.tsx` and compile.
+- [x] All 490 canonical components have `{PascalCase}.tsx` and compile.
 - [x] `pnpm exec vitest run` passes: **2,205 / 2,205 tests, zero failures**.
-- [x] CSS class-name audit: **492 / 492** components reference their canonical
+- [x] CSS class-name audit: **490 / 490** components reference their canonical
       kebab-case base class.
-- [x] Storybook story coverage: **492 / 492** components have a
+- [x] Storybook story coverage: **490 / 490** components have a
       `*.stories.tsx` file.
 
 ### 9.3 Open backlog
@@ -288,6 +288,6 @@ pnpm run storybook                   # run Storybook
 - Package manager: pnpm
 - License: MIT or Apache-2.0 or GPL-2.0 or GPL-3.0 or BSD-3-Clause
 - Contact: Joel Parker Henderson <joel@joelparkerhenderson.com>
-- Canonical catalog: [../components.tsv](../components.tsv) — 492 components
-- Root spec: [../spec.md](../spec.md)
-- Sibling example app: [../lily-design-system-react-next-examples/](../lily-design-system-react-next-examples/)
+- Canonical catalog: [../components.tsv](../../components.tsv) — 490 components
+- Root spec: [../spec/index.md](../../spec/index.md)
+- Sibling example app: [../lily-design-system-react-next-examples/](../../lily-design-system-react-next-examples/)
