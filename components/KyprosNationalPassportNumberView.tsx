@@ -1,6 +1,6 @@
-// CyprusNationalPassportNumberView component
+// KyprosNationalPassportNumberView component
 //
-// A headless display component for showing Cyprus's
+// A headless display component for showing Kypros's
 // National Passport Number in a read-only format.
 //
 // Props:
@@ -10,7 +10,7 @@
 //   ...restProps — additional HTML attributes spread onto the <span>.
 //
 // Syntax:
-//   <CyprusNationalPassportNumberView label="National Passport Number" value={value} />
+//   <KyprosNationalPassportNumberView label="National Passport Number" value={value} />
 //
 // Accessibility:
 //   - aria-label provides the accessible name so screen readers announce the purpose
@@ -20,7 +20,7 @@
 
 import React from "react";
 
-export interface CyprusNationalPassportNumberViewProps {
+export interface KyprosNationalPassportNumberViewProps {
     className?: string;
     /** Accessible label for screen readers */
     label: string;
@@ -29,15 +29,15 @@ export interface CyprusNationalPassportNumberViewProps {
     [key: string]: unknown;
 }
 
-export default function CyprusNationalPassportNumberView({
+export default function KyprosNationalPassportNumberView({
     className = "",
     label,
     value = "",
     ...restProps
-}: CyprusNationalPassportNumberViewProps) {
+}: KyprosNationalPassportNumberViewProps) {
     return (
         <span
-        className={`cyprus-national-passport-number-view ${className}`}
+        className={`kypros-national-passport-number-view ${className}`}
         aria-label={label}
         {...restProps}>{value}</span
         >

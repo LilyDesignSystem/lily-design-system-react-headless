@@ -1,6 +1,6 @@
-// IrelandIndividualHealthIdentifierInput component
+// EireIndividualHealthIdentifierInput component
 //
-// A headless input for entering an Ireland Individual Health Identifier (IHI),
+// A headless input for entering an Eire Individual Health Identifier (IHI),
 // a 10-digit clinical identifier used by the HSE to safely match patients
 // with their medical records across different hospitals and GPs.
 //
@@ -13,14 +13,14 @@
 //   ...restProps — additional HTML attributes spread onto the <input>.
 //
 // Syntax:
-//   <IrelandIndividualHealthIdentifierInput label="IHI" value={value} onChange={setValue} />
+//   <EireIndividualHealthIdentifierInput label="IHI" value={value} onChange={setValue} />
 //
 // Examples:
 //
-//   <IrelandIndividualHealthIdentifierInput label="IHI" required />
+//   <EireIndividualHealthIdentifierInput label="IHI" required />
 //
 //
-//   <IrelandIndividualHealthIdentifierInput label="IHI" disabled />
+//   <EireIndividualHealthIdentifierInput label="IHI" disabled />
 //
 // Keyboard:
 //   - Standard text input keyboard behavior
@@ -45,7 +45,7 @@
 
 import React from "react";
 
-export interface IrelandIndividualHealthIdentifierInputProps {
+export interface EireIndividualHealthIdentifierInputProps {
     className?: string;
     /** Accessible label for screen readers */
     label: string;
@@ -61,7 +61,7 @@ export interface IrelandIndividualHealthIdentifierInputProps {
     [key: string]: unknown;
 }
 
-export default function IrelandIndividualHealthIdentifierInput({
+export default function EireIndividualHealthIdentifierInput({
     className = "",
     label,
     value = "",
@@ -69,12 +69,12 @@ export default function IrelandIndividualHealthIdentifierInput({
     disabled = false,
     onChange,
     ...restProps
-}: IrelandIndividualHealthIdentifierInputProps) {
+}: EireIndividualHealthIdentifierInputProps) {
     const ihiPattern = "[0-9]{10}";
 
     return (
         <input
-        className={`ireland-individual-health-identifier-input ${className}`}
+        className={`eire-individual-health-identifier-input ${className}`}
         type="text"
         aria-label={label}
         inputMode="numeric"

@@ -1,6 +1,6 @@
-// CyprusNationalPassportNumberInput component
+// KyprosNationalPassportNumberInput component
 //
-// A headless input for entering Cyprus's National Passport Number.
+// A headless input for entering Kypros's National Passport Number.
 // Format: passports before 13/12/2010 begin with 'E' followed by 6 digits (e.g. E123456); biometric passports issued after 13/12/2010 begin with 'K' followed by 8 digits (e.g. K12345678).
 //
 // Props:
@@ -12,7 +12,7 @@
 //   ...restProps — additional HTML attributes spread onto the <input>.
 //
 // Syntax:
-//   <CyprusNationalPassportNumberInput label="National Passport Number" value={value} onChange={setValue} />
+//   <KyprosNationalPassportNumberInput label="National Passport Number" value={value} onChange={setValue} />
 //
 // Accessibility:
 //   - aria-label provides the accessible name for screen readers
@@ -24,7 +24,7 @@
 
 import React from "react";
 
-export interface CyprusNationalPassportNumberInputProps {
+export interface KyprosNationalPassportNumberInputProps {
     className?: string;
     /** Accessible label for screen readers */
     label: string;
@@ -39,7 +39,7 @@ export interface CyprusNationalPassportNumberInputProps {
     [key: string]: unknown;
 }
 
-export default function CyprusNationalPassportNumberInput({
+export default function KyprosNationalPassportNumberInput({
     className = "",
     label,
     value = "",
@@ -47,10 +47,10 @@ export default function CyprusNationalPassportNumberInput({
     disabled = false,
     onChange,
     ...restProps
-}: CyprusNationalPassportNumberInputProps) {
+}: KyprosNationalPassportNumberInputProps) {
     return (
         <input
-        className={`cyprus-national-passport-number-input ${className}`}
+        className={`kypros-national-passport-number-input ${className}`}
         type="text"
         aria-label={label}
         autoComplete="off"

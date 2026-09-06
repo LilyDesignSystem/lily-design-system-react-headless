@@ -1,8 +1,8 @@
-// NorthernIrelandHealthAndCareNumberInput component
+// TuaisceartEireannHealthAndCareNumberInput component
 //
-// A headless input for entering a Northern Ireland Health and Care (H&C)
+// A headless input for entering a Tuaisceart Eireann Health and Care (H&C)
 // Number, a 10-digit identifier displayed as XXX XXX XXXX, used by HSC
-// Northern Ireland to uniquely identify patients.
+// Tuaisceart Eireann to uniquely identify patients.
 //
 // Props:
 //   className — string, optional. CSS class name.
@@ -13,14 +13,14 @@
 //   ...restProps — additional HTML attributes spread onto the <input>.
 //
 // Syntax:
-//   <NorthernIrelandHealthAndCareNumberInput label="H&C Number" value={value} onChange={setValue} />
+//   <TuaisceartEireannHealthAndCareNumberInput label="H&C Number" value={value} onChange={setValue} />
 //
 // Examples:
 //
-//   <NorthernIrelandHealthAndCareNumberInput label="H&C Number" required />
+//   <TuaisceartEireannHealthAndCareNumberInput label="H&C Number" required />
 //
 //
-//   <NorthernIrelandHealthAndCareNumberInput label="H&C Number" disabled />
+//   <TuaisceartEireannHealthAndCareNumberInput label="H&C Number" disabled />
 //
 // Keyboard:
 //   - Standard text input keyboard behavior
@@ -45,7 +45,7 @@
 
 import React from "react";
 
-export interface NorthernIrelandHealthAndCareNumberInputProps {
+export interface TuaisceartEireannHealthAndCareNumberInputProps {
     className?: string;
     /** Accessible label for screen readers */
     label: string;
@@ -61,7 +61,7 @@ export interface NorthernIrelandHealthAndCareNumberInputProps {
     [key: string]: unknown;
 }
 
-export default function NorthernIrelandHealthAndCareNumberInput({
+export default function TuaisceartEireannHealthAndCareNumberInput({
     className = "",
     label,
     value = "",
@@ -69,12 +69,12 @@ export default function NorthernIrelandHealthAndCareNumberInput({
     disabled = false,
     onChange,
     ...restProps
-}: NorthernIrelandHealthAndCareNumberInputProps) {
+}: TuaisceartEireannHealthAndCareNumberInputProps) {
     const hcPattern = "[0-9]{3} [0-9]{3} [0-9]{4}";
 
     return (
         <input
-        className={`northern-ireland-health-and-care-number-input ${className}`}
+        className={`tuaisceart-eireann-health-and-care-number-input ${className}`}
         type="text"
         aria-label={label}
         inputMode="numeric"
